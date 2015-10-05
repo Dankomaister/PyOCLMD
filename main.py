@@ -2,6 +2,8 @@
 Created on 13 sep. 2015
 
 @author: danhe
+
+
 '''
 
 import PyOCLMD as MD
@@ -16,7 +18,7 @@ if __name__ == '__main__':
     coord, box = MD.create_simple_cubic(1e4, 3.0)
     
     sim = MD.Simulation(coord, mass, box, cutoff_radius, eps, sig, 0.25)
-    sim.create_worksizes(512)
+#     sim.create_worksizes(512)
     sim.ion_type = ['Ar'] * sim.ions
     
     sim.write_xyz('test.xyz')
